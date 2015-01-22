@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var redSquare: UIView!
 
+    @IBOutlet weak var yellowSquare: UIView!
     @IBOutlet weak var monkey: UIImageView!
     
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
         
         // Testing Coordinates
         var monkeyPosition = monkey.center
+        var monkeyCenterPoint = monkey.center
         var redSquarePosition = redSquare.center
         var redSquareFrame = redSquare.frame
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,8 +38,12 @@ class ViewController: UIViewController {
         recognizer.setTranslation(CGPointZero, inView: self.view)
         var monkeyPosition = monkey.center
         
-        if redSquare.frame.contains(monkeyPosition) {
+        let yellowFrame = yellowSquare.frame
+        let yellowFrameInSuperView = self.view.convertRect(yellowSquare.frame, fromView: redSquare)
+        
+        if yellowFrameInSuperView.contains(monkey.center) {
             println("Monkey is home")
+            recognizer.enabled = false
         }
 
     }

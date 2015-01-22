@@ -18,9 +18,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-ab-ii8">
                                 <rect key="frame" x="225" y="420" width="150" height="150"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3d-kc-l9p">
+                                        <rect key="frame" x="56" y="63" width="37" height="25"/>
+                                        <color key="backgroundColor" red="1" green="0.91099416194987526" blue="0.19006612962113278" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="CbJ-no-El5"/>
+                                            <constraint firstAttribute="width" constant="37" id="aSn-H4-W5q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.35975499370000003" blue="0.35873021469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="P3d-kc-l9p" secondAttribute="centerX" id="77G-0w-oQQ"/>
                                     <constraint firstAttribute="width" constant="150" id="87Y-Rb-DaK"/>
+                                    <constraint firstAttribute="centerY" secondItem="P3d-kc-l9p" secondAttribute="centerY" constant="-0.5" id="LSd-48-eQg"/>
                                     <constraint firstAttribute="height" constant="150" id="Vtj-sN-795"/>
                                 </constraints>
                             </view>
@@ -48,6 +60,7 @@
                     <connections>
                         <outlet property="monkey" destination="vcR-gt-Mma" id="ckR-JZ-KXN"/>
                         <outlet property="redSquare" destination="rEm-ab-ii8" id="JAA-JE-gao"/>
+                        <outlet property="yellowSquare" destination="P3d-kc-l9p" id="ZtX-B9-EeF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
