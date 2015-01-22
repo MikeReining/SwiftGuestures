@@ -16,34 +16,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6Q-2p-gAV">
-                                <rect key="frame" x="250" y="57" width="100" height="100"/>
-                                <color key="backgroundColor" red="0.40927173715380372" green="0.98708666226706443" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="acp-HO-F99"/>
-                                    <constraint firstAttribute="width" constant="100" id="yML-az-46x"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rEm-ab-ii8">
-                                <rect key="frame" x="225" y="302" width="150" height="150"/>
+                                <rect key="frame" x="225" y="420" width="150" height="150"/>
                                 <color key="backgroundColor" red="1" green="0.35975499370000003" blue="0.35873021469999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="87Y-Rb-DaK"/>
                                     <constraint firstAttribute="height" constant="150" id="Vtj-sN-795"/>
                                 </constraints>
                             </view>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="monkey" translatesAutoresizingMaskIntoConstraints="NO" id="vcR-gt-Mma">
+                                <rect key="frame" x="250" y="75" width="100" height="100"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="aXr-Lw-tsX"/>
+                                    <constraint firstAttribute="width" constant="100" id="kqS-FY-KHl"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="d0e-XO-bUD" appends="YES" id="oor-Sh-Fd4"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="rEm-ab-ii8" firstAttribute="top" secondItem="y6Q-2p-gAV" secondAttribute="bottom" constant="145" id="E6V-Su-Im8"/>
-                            <constraint firstAttribute="centerX" secondItem="rEm-ab-ii8" secondAttribute="centerX" id="jmU-ma-D3y"/>
-                            <constraint firstItem="y6Q-2p-gAV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="37" id="nCc-i9-sax"/>
-                            <constraint firstAttribute="centerX" secondItem="y6Q-2p-gAV" secondAttribute="centerX" id="oo6-uC-vwD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rEm-ab-ii8" secondAttribute="bottom" constant="30" id="8bX-KI-UEP"/>
+                            <constraint firstItem="vcR-gt-Mma" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="hJC-Yu-RQz"/>
+                            <constraint firstAttribute="centerX" secondItem="rEm-ab-ii8" secondAttribute="centerX" id="rAg-Tz-Jr6"/>
+                            <constraint firstAttribute="centerX" secondItem="vcR-gt-Mma" secondAttribute="centerX" id="t3w-iK-aUf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="redSquare" destination="rEm-ab-ii8" id="JAA-JE-gao"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="d0e-XO-bUD">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="U8b-om-0xu"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="monkey" width="320" height="320"/>
+    </resources>
 </document>
