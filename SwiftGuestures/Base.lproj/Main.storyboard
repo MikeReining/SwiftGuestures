@@ -46,6 +46,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="monkey" destination="vcR-gt-Mma" id="ckR-JZ-KXN"/>
                         <outlet property="redSquare" destination="rEm-ab-ii8" id="JAA-JE-gao"/>
                     </connections>
                 </viewController>
