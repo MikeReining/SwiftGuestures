@@ -42,8 +42,14 @@ class ViewController: UIViewController {
         let yellowFrameInSuperView = self.view.convertRect(yellowSquare.frame, fromView: redSquare)
         
         if yellowFrameInSuperView.contains(monkey.center) {
+            
             println("Monkey is home")
             recognizer.enabled = false
+            let message = "Thanks for bringing the monkey home!"
+            let alert = UIAlertController(title: "Monkey is home!", message: message, preferredStyle: .Alert)
+            let action = UIAlertAction(title: "This was fun!", style: .Default, handler: nil)
+            alert.addAction(action)
+            presentViewController(alert, animated: true, completion: nil)
         }
 
     }
